@@ -1,0 +1,449 @@
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=2, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=1, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=1, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+[Epoch 1] Training cost: 150.074, FocalLoss=84.508, SmoothL1=4.564
+[Epoch 2] Set learning rate to 0.001
+Namespace(act_type='swish', amp=False, batch_size=16, data_shape=512, dataset='nzrc', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=88, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_nzrc', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001
+[Epoch 1] Training cost: 148.619, FocalLoss=633.604, SmoothL1=4.226
+[Epoch 2] Set learning rate to 0.001
+[Epoch 2] Training cost: 135.412, FocalLoss=277.978, SmoothL1=4.505
+[Epoch 3] Set learning rate to 0.001
+[Epoch 3] Training cost: 118.625, FocalLoss=113.498, SmoothL1=4.658
+[Epoch 4] Set learning rate to 0.001
+[Epoch 4] Training cost: 141.837, FocalLoss=23.350, SmoothL1=4.308
+[Epoch 5] Set learning rate to 0.001
+[Epoch 5] Training cost: 116.228, FocalLoss=3.784, SmoothL1=4.138
+[Epoch 6] Set learning rate to 0.001
+[Epoch 6] Training cost: 135.700, FocalLoss=3.738, SmoothL1=4.044
+[Epoch 7] Set learning rate to 0.001
+[Epoch 7] Training cost: 125.312, FocalLoss=4.091, SmoothL1=4.385
+[Epoch 8] Set learning rate to 0.001
+[Epoch 8] Training cost: 147.256, FocalLoss=4.178, SmoothL1=4.297
+[Epoch 9] Set learning rate to 0.001
+[Epoch 9] Training cost: 116.742, FocalLoss=3.484, SmoothL1=4.033
+[Epoch 10] Set learning rate to 0.001
+[Epoch 10] Training cost: 143.532, FocalLoss=3.279, SmoothL1=4.159
+[Epoch 10] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0
+[Epoch 11] Set learning rate to 0.001
+[Epoch 11] Training cost: 120.692, FocalLoss=3.470, SmoothL1=4.025
+[Epoch 12] Set learning rate to 0.001
+[Epoch 12] Training cost: 137.383, FocalLoss=3.084, SmoothL1=4.240
+[Epoch 13] Set learning rate to 0.001
+[Epoch 13] Training cost: 113.085, FocalLoss=3.306, SmoothL1=4.087
+[Epoch 14] Set learning rate to 0.001
+[Epoch 14] Training cost: 136.550, FocalLoss=2.898, SmoothL1=4.084
+[Epoch 15] Set learning rate to 0.001
+[Epoch 15] Training cost: 118.414, FocalLoss=2.743, SmoothL1=3.909
+[Epoch 16] Set learning rate to 0.001
+[Epoch 16] Training cost: 141.385, FocalLoss=2.725, SmoothL1=4.084
+[Epoch 17] Set learning rate to 0.001
+[Epoch 17] Training cost: 118.120, FocalLoss=2.890, SmoothL1=4.156
+[Epoch 18] Set learning rate to 0.001
+[Epoch 18] Training cost: 141.718, FocalLoss=2.686, SmoothL1=4.114
+[Epoch 19] Set learning rate to 0.001
+[Epoch 19] Training cost: 117.265, FocalLoss=2.734, SmoothL1=4.579
+[Epoch 20] Set learning rate to 0.001
+[Epoch 20] Training cost: 137.623, FocalLoss=2.562, SmoothL1=4.044
+[Epoch 20] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0
+[Epoch 21] Set learning rate to 0.001
+[Epoch 21] Training cost: 111.781, FocalLoss=2.602, SmoothL1=4.108
+[Epoch 22] Set learning rate to 0.001
+[Epoch 22] Training cost: 134.169, FocalLoss=2.592, SmoothL1=3.960
+[Epoch 23] Set learning rate to 0.001
+[Epoch 23] Training cost: 111.775, FocalLoss=2.519, SmoothL1=4.052
+[Epoch 24] Set learning rate to 0.001
+[Epoch 24] Training cost: 138.444, FocalLoss=2.624, SmoothL1=3.872
+[Epoch 25] Set learning rate to 0.001
+[Epoch 25] Training cost: 120.509, FocalLoss=2.637, SmoothL1=4.117
+[Epoch 26] Set learning rate to 0.001
+[Epoch 26] Training cost: 145.509, FocalLoss=2.846, SmoothL1=3.995
+[Epoch 27] Set learning rate to 0.001
+[Epoch 27] Training cost: 112.670, FocalLoss=2.811, SmoothL1=4.087
+[Epoch 28] Set learning rate to 0.001
+[Epoch 28] Training cost: 133.682, FocalLoss=2.643, SmoothL1=3.778
+[Epoch 29] Set learning rate to 0.001
+[Epoch 29] Training cost: 116.617, FocalLoss=2.895, SmoothL1=4.010
+[Epoch 30] Set learning rate to 0.001
+[Epoch 30] Training cost: 140.090, FocalLoss=2.775, SmoothL1=4.412
+[Epoch 30] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0
+[Epoch 31] Set learning rate to 0.001
+[Epoch 31] Training cost: 156.100, FocalLoss=2.625, SmoothL1=3.978
+[Epoch 32] Set learning rate to 0.001
+[Epoch 32] Training cost: 198.018, FocalLoss=2.586, SmoothL1=4.094
+[Epoch 33] Set learning rate to 0.001
+[Epoch 33] Training cost: 178.195, FocalLoss=2.628, SmoothL1=3.683
+[Epoch 34] Set learning rate to 0.001
+[Epoch 34] Training cost: 162.192, FocalLoss=2.643, SmoothL1=4.055
+[Epoch 35] Set learning rate to 0.001
+[Epoch 35] Training cost: 126.078, FocalLoss=2.587, SmoothL1=3.750
+[Epoch 36] Set learning rate to 0.001
+[Epoch 36] Training cost: 142.775, FocalLoss=2.920, SmoothL1=3.909
+[Epoch 37] Set learning rate to 0.001
+[Epoch 37] Training cost: 118.048, FocalLoss=2.645, SmoothL1=3.719
+[Epoch 38] Set learning rate to 0.001
+[Epoch 38] Training cost: 141.962, FocalLoss=2.805, SmoothL1=3.563
+[Epoch 39] Set learning rate to 0.001
+[Epoch 39] Training cost: 117.771, FocalLoss=2.532, SmoothL1=3.646
+[Epoch 40] Set learning rate to 0.001
+[Epoch 40] Training cost: 140.116, FocalLoss=2.693, SmoothL1=3.881
+[Epoch 40] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0
+[Epoch 41] Set learning rate to 0.001
+[Epoch 41] Training cost: 112.080, FocalLoss=2.702, SmoothL1=3.773
+[Epoch 42] Set learning rate to 0.001
+[Epoch 42] Training cost: 132.401, FocalLoss=2.581, SmoothL1=3.470
+[Epoch 43] Set learning rate to 0.001
+[Epoch 43] Training cost: 114.588, FocalLoss=2.588, SmoothL1=3.449
+[Epoch 44] Set learning rate to 0.001
+[Epoch 44] Training cost: 141.565, FocalLoss=2.909, SmoothL1=3.701
+[Epoch 45] Set learning rate to 0.001
+[Epoch 45] Training cost: 117.549, FocalLoss=2.679, SmoothL1=3.582
+[Epoch 46] Set learning rate to 0.001
+[Epoch 46] Training cost: 141.049, FocalLoss=2.620, SmoothL1=3.879
+[Epoch 47] Set learning rate to 0.001
+[Epoch 47] Training cost: 117.806, FocalLoss=2.639, SmoothL1=3.809
+[Epoch 48] Set learning rate to 0.001
+[Epoch 48] Training cost: 141.505, FocalLoss=2.708, SmoothL1=3.593
+[Epoch 49] Set learning rate to 0.001
+[Epoch 49] Training cost: 118.512, FocalLoss=2.509, SmoothL1=3.565
+[Epoch 50] Set learning rate to 0.001
+[Epoch 50] Training cost: 142.557, FocalLoss=2.567, SmoothL1=3.647
+[Epoch 50] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0
+[Epoch 51] Set learning rate to 0.001
+[Epoch 51] Training cost: 122.925, FocalLoss=2.621, SmoothL1=3.805
+[Epoch 52] Set learning rate to 0.001
+[Epoch 52] Training cost: 133.576, FocalLoss=2.398, SmoothL1=3.557
+[Epoch 53] Set learning rate to 0.001
+[Epoch 53] Training cost: 112.108, FocalLoss=2.772, SmoothL1=3.635
+[Epoch 54] Set learning rate to 0.001
+[Epoch 54] Training cost: 134.012, FocalLoss=2.444, SmoothL1=3.792
+[Epoch 55] Set learning rate to 0.001
+[Epoch 55] Training cost: 115.080, FocalLoss=2.732, SmoothL1=3.832
+[Epoch 56] Set learning rate to 0.001
+[Epoch 56] Training cost: 149.171, FocalLoss=2.528, SmoothL1=3.590
+[Epoch 57] Set learning rate to 0.001
+[Epoch 57] Training cost: 135.121, FocalLoss=2.750, SmoothL1=3.575
+[Epoch 58] Set learning rate to 0.001
+[Epoch 58] Training cost: 140.534, FocalLoss=2.347, SmoothL1=3.519
+[Epoch 59] Set learning rate to 0.001
+[Epoch 59] Training cost: 117.982, FocalLoss=2.482, SmoothL1=3.540
+[Epoch 60] Set learning rate to 0.001
+[Epoch 60] Training cost: 140.821, FocalLoss=2.580, SmoothL1=3.488
+[Epoch 60] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0
+[Epoch 61] Set learning rate to 0.001
+[Epoch 61] Training cost: 117.822, FocalLoss=2.513, SmoothL1=3.465
+[Epoch 62] Set learning rate to 0.001
+[Epoch 62] Training cost: 140.176, FocalLoss=2.451, SmoothL1=3.437
+[Epoch 63] Set learning rate to 0.001
+[Epoch 63] Training cost: 116.703, FocalLoss=2.249, SmoothL1=3.383
+[Epoch 64] Set learning rate to 0.001
+[Epoch 64] Training cost: 141.131, FocalLoss=2.478, SmoothL1=3.416
+[Epoch 65] Set learning rate to 0.001
+[Epoch 65] Training cost: 118.163, FocalLoss=2.570, SmoothL1=3.422
+[Epoch 66] Set learning rate to 0.001
+[Epoch 66] Training cost: 140.835, FocalLoss=2.523, SmoothL1=3.518
+[Epoch 67] Set learning rate to 0.001
+[Epoch 67] Training cost: 117.324, FocalLoss=2.299, SmoothL1=3.309
+[Epoch 68] Set learning rate to 0.001
+[Epoch 68] Training cost: 138.398, FocalLoss=2.466, SmoothL1=3.527
+[Epoch 69] Set learning rate to 0.001
+[Epoch 69] Training cost: 111.961, FocalLoss=2.307, SmoothL1=3.303
+[Epoch 70] Set learning rate to 0.001
+[Epoch 70] Training cost: 138.879, FocalLoss=2.425, SmoothL1=3.541
+[Epoch 70] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0
+[Epoch 71] Set learning rate to 0.001
+[Epoch 71] Training cost: 117.149, FocalLoss=2.504, SmoothL1=3.608
+[Epoch 72] Set learning rate to 0.001
+[Epoch 72] Training cost: 140.645, FocalLoss=2.391, SmoothL1=3.461
+[Epoch 73] Set learning rate to 0.001
+[Epoch 73] Training cost: 117.510, FocalLoss=2.375, SmoothL1=3.564
+[Epoch 74] Set learning rate to 0.001
+[Epoch 74] Training cost: 140.497, FocalLoss=2.390, SmoothL1=3.628
+[Epoch 75] Set learning rate to 0.001
+[Epoch 75] Training cost: 117.529, FocalLoss=2.219, SmoothL1=3.389
+[Epoch 76] Set learning rate to 0.001
+[Epoch 76] Training cost: 135.233, FocalLoss=2.285, SmoothL1=3.476
+[Epoch 77] Set learning rate to 0.001
+[Epoch 77] Training cost: 110.479, FocalLoss=2.232, SmoothL1=3.524
+[Epoch 78] Set learning rate to 0.001
+[Epoch 78] Training cost: 137.503, FocalLoss=2.309, SmoothL1=3.346
+[Epoch 79] Set learning rate to 0.001
+[Epoch 79] Training cost: 118.017, FocalLoss=2.376, SmoothL1=3.682
+[Epoch 80] Set learning rate to 0.001
+[Epoch 80] Training cost: 140.414, FocalLoss=2.210, SmoothL1=3.268
+[Epoch 80] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0
+[Epoch 81] Set learning rate to 0.001
+[Epoch 81] Training cost: 117.461, FocalLoss=2.248, SmoothL1=3.353
+[Epoch 82] Set learning rate to 0.001
+[Epoch 82] Training cost: 141.011, FocalLoss=2.300, SmoothL1=3.263
+[Epoch 83] Set learning rate to 0.001
+[Epoch 83] Training cost: 117.259, FocalLoss=2.212, SmoothL1=3.367
+[Epoch 84] Set learning rate to 0.001
+[Epoch 84] Training cost: 138.515, FocalLoss=2.254, SmoothL1=3.475
+[Epoch 85] Set learning rate to 0.001
+[Epoch 85] Training cost: 116.524, FocalLoss=2.365, SmoothL1=3.502
+[Epoch 86] Set learning rate to 0.001
+[Epoch 86] Training cost: 140.843, FocalLoss=2.405, SmoothL1=3.356
+[Epoch 87] Set learning rate to 0.001
+[Epoch 87] Training cost: 117.476, FocalLoss=2.345, SmoothL1=3.434
+[Epoch 88] Set learning rate to 0.001
+[Epoch 88] Training cost: 140.612, FocalLoss=2.297, SmoothL1=3.331
+[Epoch 89] Set learning rate to 0.001
+[Epoch 89] Training cost: 117.694, FocalLoss=2.379, SmoothL1=3.332
+[Epoch 90] Set learning rate to 0.001
+[Epoch 90] Training cost: 140.996, FocalLoss=2.302, SmoothL1=3.409
+[Epoch 90] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0
+[Epoch 91] Set learning rate to 0.001
+[Epoch 91] Training cost: 120.825, FocalLoss=2.271, SmoothL1=3.459
+[Epoch 92] Set learning rate to 0.001
+[Epoch 92] Training cost: 133.097, FocalLoss=2.306, SmoothL1=3.479
+[Epoch 93] Set learning rate to 0.001
+[Epoch 93] Training cost: 110.982, FocalLoss=2.399, SmoothL1=3.494
+[Epoch 94] Set learning rate to 0.001
+[Epoch 94] Training cost: 132.424, FocalLoss=2.311, SmoothL1=3.317
+[Epoch 95] Set learning rate to 0.001
+[Epoch 95] Training cost: 109.960, FocalLoss=2.222, SmoothL1=3.149
+[Epoch 96] Set learning rate to 0.001
+[Epoch 96] Training cost: 132.798, FocalLoss=2.332, SmoothL1=3.091
+[Epoch 97] Set learning rate to 0.001
+[Epoch 97] Training cost: 112.165, FocalLoss=2.217, SmoothL1=3.482
+[Epoch 98] Set learning rate to 0.001
+[Epoch 98] Training cost: 137.918, FocalLoss=2.220, SmoothL1=3.100
+[Epoch 99] Set learning rate to 0.001
+[Epoch 99] Training cost: 117.732, FocalLoss=2.220, SmoothL1=3.239
+[Epoch 100] Set learning rate to 0.001
+[Epoch 100] Training cost: 141.149, FocalLoss=2.271, SmoothL1=3.397
+[Epoch 100] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+No Damage=0.0
+Minor Damage=nan
+Major Damage=0.0
+Destroyed=nan
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=0.0

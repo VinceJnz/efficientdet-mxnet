@@ -1,0 +1,3 @@
+Namespace(act_type='swish', amp=False, batch_size=4, data_shape=512, dataset='coco', dataset_root='D:/Users/Vince/Downloads/datasets', epochs=100, gpus='0', log_interval=100, lr=0.001, lr_decay=0.1, lr_decay_epoch='160,180', lr_decay_period=0, lr_mode='step', momentum=0.9, network='efficientdet-d0', num_samples=117266, num_workers=1, resume='', save_interval=10, save_prefix='./checkpoint/efficientdet-d0_512_coco', seed=233, start_epoch=0, syncbn=True, val_interval=10, warmup_epochs=0, warmup_lr=0.0, wd=4e-05)
+Start training from [Epoch 0]
+[Epoch 1] Set learning rate to 0.001

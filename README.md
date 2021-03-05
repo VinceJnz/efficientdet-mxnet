@@ -26,3 +26,32 @@ MXNet implementation of EfficientDet object detection as described in [Efficient
 ```
 python demo_efficientdet.py
 ```
+
+## Notes
+### Training script
+I am using the training shell script as follows:
+Changed gpus from
+ - --gpus 0,1,2,3
+ to
+ - --gpus 0
+
+
+### python environment
+ To activate a python environment use the following bash command:
+ source activate
+
+ See: https://docs.python.org/3/tutorial/venv.html
+
+### gluoncv
+Was gluoncv==0.8.0
+downgraded to gluoncv==0.6.0
+
+
+### python date/time
+    from datetime import datetime
+
+    # current date and time
+    now = datetime.now()
+
+    timestamp = datetime.timestamp(now)
+    print(timestamp + ": reduction.py dump "+"file="+file+", protocol="+protocol)

@@ -1,6 +1,7 @@
 #coding=utf-8
 import mxnet as mx
 import os
+import warnings #Add to support class reset
 from mxnet.gluon import nn
 from gluoncv.nn.coder import MultiPerClassDecoder, NormalizedBoxCenterDecoder
 from .efficientnet import _add_conv, Activation, get_efficientnet
@@ -299,6 +300,115 @@ class EfficientDet(nn.HybridBlock):
         scores = F.slice_axis(result, axis=2, begin=1, end=2)
         bboxes = F.slice_axis(result, axis=2, begin=2, end=6)
         return ids, scores, bboxes
+
+    def reset_class(self, classes, reuse_weights=None):
+        """Reset class categories and class predictors.
+        Parameters
+        ----------
+        classes : iterable of str
+            The new categories. ['apple', 'orange'] for example.
+        reuse_weights : dict
+            A {new_integer : old_integer} or mapping dict or {new_name : old_name} mapping dict,
+            or a list of [name0, name1,...] if class names don't change.
+            This allows the new predictor to reuse the
+            previously trained weights specified.
+            
+        Example
+        -------
+        >>> net = gluoncv.model_zoo.get_model('ssd_512_resnet50_v1_voc', pretrained=True)
+        >>> # use direct name to name mapping to reuse weights
+        >>> net.reset_class(classes=['person'], reuse_weights={'person':'person'})
+        >>> # or use interger mapping, person is the 14th category in VOC
+        >>> net.reset_class(classes=['person'], reuse_weights={0:14})
+        >>> # you can even mix them
+        >>> net.reset_class(classes=['person'], reuse_weights={'person':14})
+        >>> # or use a list of string if class name don't change
+        >>> net.reset_class(classes=['person'], reuse_weights=['person'])
+        """
+
+        self._clear_cached_op()
+        #old_classes = self.classes
+        self.classes = classes
+
+        """
+        # trying to reuse weights by mapping old and new classes
+        if isinstance(reuse_weights, (dict, list)):
+            if isinstance(reuse_weights, dict):
+                # trying to replace str with indices
+                new_keys = []
+                new_vals = []
+                for k, v in reuse_weights.items():
+                    if isinstance(v, str):
+                        try:
+                            new_vals.append(old_classes.index(v))  # raise ValueError if not found
+                        except ValueError:
+                            raise ValueError(
+                                "{} not found in old class names {}".format(v, old_classes))
+                    else:
+                        if v < 0 or v >= len(old_classes):
+                            raise ValueError(
+                                "Index {} out of bounds for old class names".format(v))
+                        new_vals.append(v)
+                    if isinstance(k, str):
+                        try:
+                            new_keys.append(self.classes.index(k))  # raise ValueError if not found
+                        except ValueError:
+                            raise ValueError(
+                                "{} not found in new class names {}".format(k, self.classes))
+                    else:
+                        if k < 0 or k >= len(self.classes):
+                            raise ValueError(
+                                "Index {} out of bounds for new class names".format(k))
+                        new_keys.append(k)
+                reuse_weights = dict(zip(new_keys, new_vals))
+            else:
+                new_map = {}
+                for x in reuse_weights:
+                    try:
+                        new_idx = self.classes.index(x)
+                        old_idx = old_classes.index(x)
+                        new_map[new_idx] = old_idx
+                    except ValueError:
+                        warnings.warn("{} not found in old: {} or new class names: {}".format(
+                            x, old_classes, self.classes))
+                reuse_weights = new_map
+        """
+        """
+        # replace class predictors
+        with self.name_scope():
+            class_predictors = nn.HybridSequential(prefix=self.class_predictors.prefix)
+            for i, ag in zip(range(len(self.class_predictors)), self.anchor_generators):
+                # Re-use the same prefix and ctx_list as used by the current ConvPredictor
+                prefix = self.class_predictors[i].prefix
+                old_pred = self.class_predictors[i].predictor
+                ctx = list(old_pred.params.values())[0].list_ctx()
+                # to avoid deferred init, number of in_channels must be defined
+                in_channels = list(old_pred.params.values())[0].shape[1]
+                new_cp = ConvPredictor(ag.num_depth * (self.num_classes + 1),
+                                       in_channels=in_channels, prefix=prefix)
+                new_cp.collect_params().initialize(ctx=ctx)
+                if reuse_weights:
+                    assert isinstance(reuse_weights, dict)
+                    for old_params, new_params in zip(old_pred.params.values(),
+                                                      new_cp.predictor.params.values()):
+                        old_data = old_params.data()
+                        new_data = new_params.data()
+
+                        for k, v in reuse_weights.items():
+                            if k >= len(self.classes) or v >= len(old_classes):
+                                warnings.warn("reuse mapping {}/{} -> {}/{} out of range".format(
+                                    k, self.classes, v, old_classes))
+                                continue
+                            # always increment k and v (background is always the 0th)
+                            new_data[k+1::len(self.classes)+1] = old_data[v+1::len(old_classes)+1]
+                        # reuse background weights as well
+                        new_data[0::len(self.classes)+1] = old_data[0::len(old_classes)+1]
+                        # set data to new conv layers
+                        new_params.set_data(new_data)
+                class_predictors.add(new_cp)
+            self.class_predictors = class_predictors
+            self.cls_decoder = MultiPerClassDecoder(len(self.classes) + 1, thresh=0.01)
+        """
 
 
 def efficientdet_params(model_name):

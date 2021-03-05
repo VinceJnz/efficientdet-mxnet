@@ -44,6 +44,18 @@ def get_dataset(dataset, args):
         # coco validation is slow, consider increase the validation interval
         if args.val_interval == 1:
             args.val_interval = 10
+    elif dataset.lower() == 'nzrc':
+        # The classes for the dataset need to be reset after net is loaded to prevent a classes mismatch errors when loading net.
+        gdata.COCODetection.CLASSES=classes
+        print("train_efficirntdet.py-50 get_dataset CLASSES=", gdata.COCODetection.CLASSES)
+        train_dataset = gdata.COCODetection(root=args.dataset_root + "/NZRC/ML4DR_v2", splits='coco_export2_train')
+        val_dataset = gdata.COCODetection(root=args.dataset_root + "/NZRC/ML4DR_v2", splits='coco_export2_val', skip_empty=False)
+        val_metric = COCODetectionMetric(
+            val_dataset, args.save_prefix + '_eval', cleanup=True,
+            data_shape=(args.data_shape, args.data_shape))
+        # coco validation is slow, consider increase the validation interval
+        if args.val_interval == 1:
+            args.val_interval = 10
     else:
         raise NotImplementedError('Dataset: {} not implemented.'.format(dataset))
     if args.num_samples < 0:
@@ -133,6 +145,7 @@ def train(net, train_data, val_data, eval_metric, ctx, args):
     if args.amp:
         amp.init_trainer(trainer)
 
+    print("train_efficientdet.py-148 train classes=", classes, len(classes))
     cls_box_loss = EfficientDetLoss(len(classes)+1, rho=0.1, lambd=50.0)
     ce_metric    = mx.metric.Loss('FocalLoss')
     smoothl1_metric = mx.metric.Loss('SmoothL1')
@@ -213,6 +226,7 @@ if __name__ == '__main__':
     gutils.random.seed(args.seed)
     ctx = [mx.gpu(int(i)) for i in args.gpus.split(',') if i.strip()]
     ctx = ctx if ctx else [mx.cpu()]
+    print("train_efficientdet.py-216 __main__1 ctx=",ctx)
     
     net_name = '_'.join((args.network, str(args.data_shape), args.dataset))
     if not os.path.exists(args.save_prefix):
@@ -224,9 +238,11 @@ if __name__ == '__main__':
     elif args.dataset.lower() == 'voc':
         from gluoncv.data import VOCDetection
         classes = VOCDetection.CLASSES
+    elif args.dataset.lower() == 'nzrc':
+        classes = ['No Damage', 'Minor Damage', 'Major Damage', 'Destroyed']
     else:
         raise NotImplementedError('Dataset: {} not implemented.'.format(args.dataset))
-
+    print("train_efficient.py-242 __main__ classes=", classes)
     if args.syncbn and len(ctx) > 1:
         net = get_efficientdet(args.network, classes, 
                                pretrained_base=False, act_type=args.act_type,

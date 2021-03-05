@@ -9,7 +9,7 @@ from model.efficientdet import get_efficientdet
 
 def load_img(img_path, img_shape=512, mean=(0.485, 0.456, 0.406),
                    std=(0.229, 0.224, 0.225)):
-    img = mx.nd.imread(img_path)
+    img = mx.image.imread(img_path)
     img = mx.nd.image.resize(img, (img_shape, img_shape))
     orig_img = img.asnumpy().astype('uint8')
     img = mx.nd.image.to_tensor(img)
@@ -19,7 +19,7 @@ def load_img(img_path, img_shape=512, mean=(0.485, 0.456, 0.406),
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Test with efficientdet networks.')
-    parser.add_argument('--network', type=str, default='efficientdet-b1',
+    parser.add_argument('--network', type=str, default='efficientdet-d1',
                         help="Base network name")
     parser.add_argument('--data-shape', type=int, default=640,
                         help="Input data shape, use 300, 512.")
@@ -41,6 +41,7 @@ if __name__ == '__main__':
     # context list
     ctx = [mx.gpu(int(i)) for i in args.gpus.split(',') if i.strip()]
     ctx = [mx.cpu()] if not ctx else ctx
+    print("demo_efficientdet.py-44 __main__1 ctx=",ctx)
 
     # grab some image if not specified
     if not args.images.strip():
@@ -56,6 +57,8 @@ if __name__ == '__main__':
     elif args.dataset.lower() == 'voc':
         from gluoncv.data import VOCDetection
         classes = VOCDetection.CLASSES
+    elif args.dataset.lower() == 'nzrc':
+        classes = ['No Damage', 'Minor Damage', 'Major Damage', 'Destroyed']
     else:
         raise NotImplementedError('Dataset: {} not implemented.'.format(args.dataset))
 
@@ -66,7 +69,8 @@ if __name__ == '__main__':
 
     for image in image_list:
         ax = None
-        x, img = load_img(image, short=args.data_shape)
+        #x, img = load_img(image, short=args.data_shape)
+        x, img = load_img(image, args.data_shape)
         x = x.as_in_context(ctx[0])
         ids, scores, bboxes = [xx[0].asnumpy() for xx in net(x)]
         ax = gcv.utils.viz.plot_bbox(img, bboxes, scores, ids, thresh=args.thresh,
