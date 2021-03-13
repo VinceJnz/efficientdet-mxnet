@@ -1,0 +1,1032 @@
+EfficientDet(
+  (stages): HybridSequential(
+    (0): HybridSequential(
+      (0): Conv2D(3 -> 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=32)
+      (2): Activation(
+        (act): Swish(
+        
+        )
+      )
+      (3): HybridSequential(
+        (0): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(1 -> 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=32)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(32 -> 8, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(8 -> 32, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (4): Conv2D(32 -> 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (5): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=16)
+          )
+        )
+      )
+      (4): HybridSequential(
+        (0): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(16 -> 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=96)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=96, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=96)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(96 -> 24, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(24 -> 96, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(96 -> 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=24)
+          )
+        )
+        (1): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(24 -> 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=144)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 144, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=144, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=144)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(144 -> 40, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(40 -> 144, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(144 -> 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=24)
+          )
+        )
+      )
+      (5): HybridSequential(
+        (0): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(24 -> 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=144)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 144, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=144, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=144)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(144 -> 40, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(40 -> 144, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(144 -> 40, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=40)
+          )
+        )
+        (1): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(40 -> 240, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=240)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 240, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=240, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=240)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(240 -> 64, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(64 -> 240, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(240 -> 40, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=40)
+          )
+        )
+      )
+    )
+    (1): HybridSequential(
+      (0): HybridSequential(
+        (0): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(40 -> 240, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=240)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 240, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=240, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=240)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(240 -> 64, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(64 -> 240, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(240 -> 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=80)
+          )
+        )
+        (1): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(80 -> 480, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=480)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 480, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=480, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=480)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(480 -> 120, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(120 -> 480, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(480 -> 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=80)
+          )
+        )
+        (2): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(80 -> 480, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=480)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 480, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=480, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=480)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(480 -> 120, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(120 -> 480, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(480 -> 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=80)
+          )
+        )
+      )
+      (1): HybridSequential(
+        (0): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(80 -> 480, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=480)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 480, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=480, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=480)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(480 -> 120, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(120 -> 480, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(480 -> 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=112)
+          )
+        )
+        (1): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(112 -> 672, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=672)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 672, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=672, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=672)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(672 -> 168, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(168 -> 672, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(672 -> 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=112)
+          )
+        )
+        (2): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(112 -> 672, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=672)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 672, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=672, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=672)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(672 -> 168, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(168 -> 672, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(672 -> 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=112)
+          )
+        )
+      )
+    )
+    (2): HybridSequential(
+      (0): HybridSequential(
+        (0): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(112 -> 672, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=672)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 672, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=672, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=672)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(672 -> 168, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(168 -> 672, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(672 -> 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=192)
+          )
+        )
+        (1): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(192 -> 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=1152)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 1152, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1152, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=1152)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(1152 -> 288, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(288 -> 1152, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(1152 -> 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=192)
+          )
+        )
+        (2): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(192 -> 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=1152)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 1152, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1152, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=1152)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(1152 -> 288, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(288 -> 1152, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(1152 -> 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=192)
+          )
+        )
+        (3): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(192 -> 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=1152)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 1152, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1152, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=1152)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(1152 -> 288, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(288 -> 1152, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(1152 -> 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=192)
+          )
+        )
+      )
+      (1): HybridSequential(
+        (0): LinearBottleneck(
+          (dropout): Dropout(p = 0.2, axes=(1, 2, 3))
+          (out): HybridSequential(
+            (0): Conv2D(192 -> 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=1152)
+            (2): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (3): Conv2D(1 -> 1152, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1152, bias=False)
+            (4): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=1152)
+            (5): Activation(
+              (act): Swish(
+              
+              )
+            )
+            (6): _SE(
+              (pool): GlobalAvgPool2D(size=(1, 1), stride=(1, 1), padding=(0, 0), ceil_mode=True, global_pool=True, pool_type=avg, layout=NCHW)
+              (conv1): Conv2D(1152 -> 288, kernel_size=(1, 1), stride=(1, 1))
+              (act1): Activation(
+                (act): Activation(relu)
+              )
+              (conv2): Conv2D(288 -> 1152, kernel_size=(1, 1), stride=(1, 1))
+              (act2): Activation(
+                (act): HardSigmoid(
+                  (act): ReLU6(
+                  
+                  )
+                )
+              )
+            )
+            (7): Conv2D(1152 -> 320, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (8): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=320)
+          )
+        )
+      )
+    )
+  )
+  (proj_convs): HybridSequential(
+    (0): HybridSequential(
+      (0): Conv2D(40 -> 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+      (2): Activation(
+        (act): Swish(
+        
+        )
+      )
+    )
+    (1): HybridSequential(
+      (0): Conv2D(112 -> 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+      (2): Activation(
+        (act): Swish(
+        
+        )
+      )
+    )
+    (2): HybridSequential(
+      (0): Conv2D(320 -> 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+      (2): Activation(
+        (act): Swish(
+        
+        )
+      )
+    )
+    (3): HybridSequential(
+      (0): Conv2D(320 -> 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+      (2): Activation(
+        (act): Swish(
+        
+        )
+      )
+    )
+    (4): HybridSequential(
+      (0): Conv2D(320 -> 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+      (2): Activation(
+        (act): Swish(
+        
+        )
+      )
+    )
+  )
+  (fpns): HybridSequential(
+    (0): BiFPN(
+      (convs): HybridSequential(
+        (0): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (1): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (2): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (3): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (4): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (5): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (6): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (7): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+      )
+    )
+    (1): BiFPN(
+      (convs): HybridSequential(
+        (0): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (1): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (2): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (3): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (4): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (5): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (6): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (7): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+      )
+    )
+    (2): BiFPN(
+      (convs): HybridSequential(
+        (0): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (1): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (2): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (3): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (4): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (5): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (6): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+        (7): SeparableConvBlock(
+          (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+          (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+          (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+          (act): Activation(
+            (act): Swish(
+            
+            )
+          )
+        )
+      )
+    )
+  )
+  (anchor_generators): HybridSequential(
+    (0): AnchorGenerator(
+    
+    )
+    (1): AnchorGenerator(
+    
+    )
+    (2): AnchorGenerator(
+    
+    )
+    (3): AnchorGenerator(
+    
+    )
+    (4): AnchorGenerator(
+    
+    )
+  )
+  (cls_net): OutputSubnet(
+    (body): HybridSequential(
+      (0): SeparableConvBlock(
+        (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+        (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+        (act): Activation(
+          (act): Swish(
+          
+          )
+        )
+      )
+      (1): SeparableConvBlock(
+        (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+        (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+        (act): Activation(
+          (act): Swish(
+          
+          )
+        )
+      )
+      (2): SeparableConvBlock(
+        (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+        (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+        (act): Activation(
+          (act): Swish(
+          
+          )
+        )
+      )
+    )
+    (output): SeparableConvBlock(
+      (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+      (pointwise_conv): Conv2D(64 -> 45, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (box_net): OutputSubnet(
+    (body): HybridSequential(
+      (0): SeparableConvBlock(
+        (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+        (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+        (act): Activation(
+          (act): Swish(
+          
+          )
+        )
+      )
+      (1): SeparableConvBlock(
+        (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+        (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+        (act): Activation(
+          (act): Swish(
+          
+          )
+        )
+      )
+      (2): SeparableConvBlock(
+        (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (pointwise_conv): Conv2D(64 -> 64, kernel_size=(1, 1), stride=(1, 1))
+        (norm): BatchNorm(axis=1, eps=1e-05, momentum=0.9, fix_gamma=False, use_global_stats=False, in_channels=64)
+        (act): Activation(
+          (act): Swish(
+          
+          )
+        )
+      )
+    )
+    (output): SeparableConvBlock(
+      (depthwise_conv): Conv2D(1 -> 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+      (pointwise_conv): Conv2D(64 -> 36, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (bbox_decoder): NormalizedBoxCenterDecoder(
+  
+  )
+  (cls_decoder): MultiPerClassDecoder(
+  
+  )
+)
+if __name__ == '__main__':
+    args = parse_args()
+    # context list
+    ctx = [mx.gpu(int(i)) for i in args.gpus.split(',') if i.strip()]
+    ctx = [mx.cpu()] if not ctx else ctx
+    print("ctx=", ctx)
+    
+    # grab some image if not specified
+    if not args.images.strip():
+        gcv.utils.download("https://cloud.githubusercontent.com/assets/3307514/" +
+            "20012568/cbc2d6f6-a27d-11e6-94c3-d35a9cb47609.jpg", 'street.jpg')
+        image_list = ['street.jpg']
+    else:
+        image_list = [x.strip() for x in args.images.split(',') if x.strip()]
+
+    if args.dataset.lower() == 'coco':
+        from gluoncv.data import COCODetection
+        classes = COCODetection.CLASSES
+    elif args.dataset.lower() == 'voc':
+        from gluoncv.data import VOCDetection
+        classes = VOCDetection.CLASSES
+    elif args.dataset.lower() == 'nzrc':
+        classes = ['No Damage', 'Minor Damage', 'Major Damage', 'Destroyed']
+    else:
+        raise NotImplementedError('Dataset: {} not implemented.'.format(args.dataset))
+
+    net = get_efficientdet(args.network, classes, pretrained_base=False)
+    net.load_parameters(args.pretrained_path)
+    net.set_nms(0.45, 200)
+    net.collect_params().reset_ctx(ctx = ctx)
+
+if __name__ == '__main__':
