@@ -40,6 +40,9 @@ Changed gpus from
  To activate a python environment use the following bash command:
  source activate
 
+where
+- activate is the activate comand in the Scripts subfolder for the python environment
+
  See: https://docs.python.org/3/tutorial/venv.html
 
 ### gluoncv
